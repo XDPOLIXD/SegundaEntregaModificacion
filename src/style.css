@@ -5,12 +5,17 @@
     text-align: center;
     margin: 20vh;
     color: #f74404;
+    background-color: #D5652A;
+    color: #ffffff; /* Cambia el color del texto para que sea legible en el fondo gris */
+    padding: 5px 10px; /* Ajusta el espaciado interno para que se vea mejor */
 }
 
 .container-card {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    background-color: #D5652A;
+    padding: 5px 10px; /* Ajusta el espaciado interno para que se vea mejor */
 }
 
 .spinner-container {

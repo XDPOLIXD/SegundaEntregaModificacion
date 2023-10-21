@@ -1,30 +1,47 @@
+import React, { useState, useEffect } from "react";
 import { CircularProgress, Grid, Typography } from "@mui/material";
-import useAsyncMock from "../../hooks/useAsyncMock";
-import products from '../../mocks/products.json';
 import ProductDetail from "./ProductDetail";
-import ProductInfo from "./ProductInfo";
+import productsData from "../../mocks/products.json";
 
 const ProductList = () => {
-    const { data, loading } = useAsyncMock(products)
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    if (loading) return <CircularProgress />
+    useEffect(() => {
+        // Parsea el JSON si productsData es un string JSON
+        const products = Array.isArray(productsData)
+            ? productsData
+            : JSON.parse(productsData);
 
-    return (<div className="container">
-        <Typography variant="h2" style={{ color: "#f74404" }}>
-            Productos
-        </Typography>
-        <Grid container spacing={3}>
-            {
-                data.map((product) => {
-                    return (
-                        <ProductDetail key={product.id} product={product}>
-                        </ProductDetail>
-                    )
-                })
-            }
-        </Grid>
+        // Asegura que los elementos tengan claves únicas
+        const uniqueProducts = products.map((product, index) => ({
+            id: `${product.id}_${index}`,
+            image: product.image,
+            title: product.title,
+            price: product.price,
+            category: product.category,
+            itHasDues: product.itHasDues,
+            isAnOffer: product.isAnOffer,
+            stock: product.stock
+        }));
+        setData(uniqueProducts);
+        setLoading(false);
+    }, []);
 
-    </div>);
-}
+    if (loading) return <CircularProgress />;
+
+    return (
+        <div className="container">
+            <Typography variant="h2" style={{ color: "#ffffff" }}>
+                Productos
+            </Typography>
+            <Grid container spacing={3}>
+                {data.map((product) => (
+                    <ProductDetail key={product.id} product={product} />
+                ))}
+            </Grid>
+        </div>
+    );
+};
 
 export default ProductList;
