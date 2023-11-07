@@ -6,8 +6,10 @@
     margin: 20vh;
     color: #f74404;
     background-color: #D5652A;
-    color: #ffffff; /* Cambia el color del texto para que sea legible en el fondo gris */
-    padding: 5px 10px; /* Ajusta el espaciado interno para que se vea mejor */
+    color: #ffffff;
+    /* Cambia el color del texto para que sea legible en el fondo gris */
+    padding: 5px 10px;
+    /* Ajusta el espaciado interno para que se vea mejor */
 }
 
 .container-card {
@@ -15,7 +17,8 @@
     justify-content: center;
     margin-top: 50px;
     background-color: #D5652A;
-    padding: 5px 10px; /* Ajusta el espaciado interno para que se vea mejor */
+    padding: 5px 10px;
+    /* Ajusta el espaciado interno para que se vea mejor */
 }
 
 .spinner-container {
@@ -129,8 +132,8 @@
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    margin: 0 15px; 
-    transition: color 0.3s ease; 
+    margin: 0 15px;
+    transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
@@ -167,3 +170,63 @@
     margin: 10px 0;
 }
 
+.checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+}
+
+.checkout-form h2 {
+    margin-bottom: 20px;
+    /* Añade espacio inferior para separar el título del formulario */
+    line-height: 1.5;
+    /* Alineación vertical del título */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #D5652A;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #D5652A;
+}

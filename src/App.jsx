@@ -5,6 +5,7 @@ import ProductList from './components/products/ProductList'
 import CategoriesProductList from './components/categories/CategoriesProductList'
 import Navbar from './components/Navbar/Navbar'
 import Cart from './components/Cart/Cart'
+import Checkout from './components/Checkout/Checkout' // Importa el componente Checkout
 import CartProvider from './context/CartContext'
 
 function App() {
@@ -19,10 +20,10 @@ function App() {
             <Route exact path="/products" element={<ProductList />} />
             <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/checkout" element={<Checkout />} /> {/* Agrega la ruta para el formulario de checkout */}
           </Routes>
         </Router>
       </CartProvider>
-
     </>
   )
 }
