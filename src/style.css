@@ -1,11 +1,18 @@
+body {
+    background-image: url('/public/1920x1080-px-luxury-watches-watch-1198348-wallhere.com.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 20vh;
+    margin: 35vh;
     color: #f74404;
-    background-color: #D5652A;
+    background-color: #6b81ca;
     color: #ffffff;
     /* Cambia el color del texto para que sea legible en el fondo gris */
     padding: 5px 10px;
@@ -16,7 +23,7 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    background-color: #D5652A;
+    background-color: #6b81ca;
     padding: 5px 10px;
     /* Ajusta el espaciado interno para que se vea mejor */
 }
